@@ -11,6 +11,11 @@ Discount, Product Category, Product Sub-Category */
 /*1A. Overall Performace DQLab Store from 2009 - 2012 for the number of orders and total 
 finished sales orders.*/
 
+select year(order_date) as years, sum(sales) as sales , count(order_date) as number_of_order
+from dqlab_sales_store
+where order_status = "Order Finished"
+group by years
+;
 
 --===============================================================================================
 /*1B. Overall performance of DQLab by product subcategory to be compared between 2011 and 2012*/
