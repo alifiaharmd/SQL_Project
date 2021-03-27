@@ -4,6 +4,21 @@ with 5500 rows.The order status devided into order finised, order returned and o
 
 The attributes were OrderID, Order Status, Customer, Order Quantity, Sales, Discount %, 
 Discount, Product Category, Product Sub-Category */
+
+select *
+from dqlab_sales_store
+limit 5
+
++----------+----------------+--------------------+------------+----------------+----------+----------+----------------+------------------+--------------------------------+
+| order_id | order_status   | customer           | order_date | order_quantity | sales    | discount | discount_value | product_category | product_sub_category           |
++----------+----------------+--------------------+------------+----------------+----------+----------+----------------+------------------+--------------------------------+
+|        3 | Order Finished | Muhammed MacIntyre | 2010-10-13 |              6 |   523080 |     0.04 |          20923 | Office Supplies  | Storage & Organization         |
+|      293 | Order Finished | Barry French       | 2012-10-01 |             49 | 20246040 |     0.07 |        1417223 | Office Supplies  | Appliances                     |
+|      483 | Order Finished | Clay Rozendal      | 2011-07-10 |             30 |  9931519 |     0.08 |         794522 | Technology       | Telephones and Communication   |
+|      515 | Order Finished | Carlos Soltero     | 2010-08-28 |             19 |   788540 |     0.08 |          63083 | Office Supplies  | Appliances                     |
+|      613 | Order Finished | Carl Jackson       | 2011-06-17 |             12 |   187080 |     0.03 |           5612 | Office Supplies  | Binders and Binder Accessories |
++----------+----------------+--------------------+------------+----------------+----------+----------+----------------+------------------+--------------------------------+ 
+
 --===============================================================================================
 
 
@@ -110,13 +125,20 @@ order by sales desc
 +-------+--------------------------------+------------------+-----------+-----------------+----------------------+
 
 --==============================================================================================
---3A. Analysis of customers every year
+--3A. Customer Transaction per Year
 
+select year(order_date) as years, count(distinct customer) as number_of_customer
+from dqlab_sales_store
+where order_status = "order finished"
+group by year(order_date)
 
+--Output
++-------+--------------------+
+| years | number_of_customer |
++-------+--------------------+
+|  2009 |                585 |
+|  2010 |                593 |
+|  2011 |                581 |
+|  2012 |                594 |
++-------+--------------------+
 
---==============================================================================================
---3B. Analysis of the number of new customers each year
-
-
---==============================================================================================
---3C. Cohort to find out the customer retention rate in 2009
