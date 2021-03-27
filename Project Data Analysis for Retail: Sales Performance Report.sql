@@ -1,4 +1,6 @@
 --===============================================================================================
+-- A Porject from DQlLab
+
 /* The dataset (dqlab_sales_store) that used contains transactions between 2009 to 2012 
 with 5500 rows.The order status devided into order finised, order returned and order cancelled.
 
