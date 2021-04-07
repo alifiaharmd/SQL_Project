@@ -58,3 +58,14 @@ SET Address= "74 Pine St.",
 WHERE CustomerID = "26";
 
 --Q6 Remove a customer's record
+/* check the correct customer data*/
+Select * FROM customers
+WHERE FisrtName = "Taylor" and LastName="Jenkins"
+
+/*Delet the data*/
+DELETE 
+
+
+--Q7 Log custoner responses
+
+--Q8 Look up reservation
