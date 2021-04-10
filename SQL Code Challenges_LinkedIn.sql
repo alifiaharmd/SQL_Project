@@ -157,3 +157,14 @@ UPDATE Customers
 SET FavoriteDish = (SELECT DishID From Dishes WHERE name = "Quinoa Salmon Salad")
 WHERE CustomerID = "42";
 
+---------------------------------------------------
+--Q12 Prepare a report of your top five customers--
+---------------------------------------------------
+SELECT COUNT(O.OrderID) as "Number of Orders", C.FirstName, C.LastName, C.Email
+FROM Customers C
+JOIN Orders O
+ON C.CustomerID = O.CustomerID
+GROUP BY O.CustomerID
+ORDER BY "Number of Orders" DESC
+LIMIT 5;
+
