@@ -1,5 +1,6 @@
 --SQL Code Challenges from Linkedin Learning--
 --- PART 1, IN THE RESTAURANT---
+--___________________________--
 
 -----------------------------------
 --Q1 CREATE INVITATION TO A PARTY--
