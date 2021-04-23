@@ -1,3 +1,3 @@
 # SQL_Project
 
-This repository will contain the number of sql projects.
+This repository contains the number of sql projects.
