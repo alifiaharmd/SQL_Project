@@ -1,3 +1,5 @@
+--Run in PostgreSQL v10.0
+
 CREATE TABLE countries (
   "id" VARCHAR(3),
   "region_id" VARCHAR(3),
