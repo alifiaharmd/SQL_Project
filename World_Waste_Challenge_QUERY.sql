@@ -174,11 +174,14 @@ LIMIT 2;
 /*For each country, identify the percent of organic waste produced by country and the percent of composting
 the country does.*/
 
+SELECT
 
 /*For each country in ECS region, calculate the percent of glass, plastic, paper, and metal that is NOT
 recycled.*/
 
+SELECT
 
 /*For each region, calculate the maximum percent of each composition and treatment type. Order the
 regions alphabetically.*/
 
+SELECT
